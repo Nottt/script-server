@@ -3,7 +3,7 @@
 
 # Install necessary packages
 
-apt update && apt install curl git -y
+apt update && apt install curl -y
 
 # Retrieve files
 
