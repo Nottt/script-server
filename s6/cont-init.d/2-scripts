@@ -3,4 +3,5 @@
 
 # Insert any bash code that install whatever your scripts needs to run on Debian Buster
 
-
+ apt install zip
+ apt install jq
