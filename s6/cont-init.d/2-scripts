@@ -1,7 +1,0 @@
-#!/usr/bin/with-contenv bash
-# shellcheck shell=bash
-
-# Insert any bash code that install whatever your scripts needs to run on Debian Buster
-
- apt install zip
- apt install jq
