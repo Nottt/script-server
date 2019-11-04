@@ -1,5 +1,6 @@
 FROM python:3.7-slim-buster
 
+ARG DEBIAN_FRONTEND=noninteractive
 ENV LANG='C.UTF-8' LANGUAGE='C.UTF-8' LC_ALL='C.UTF-8'
 
 # Add s6 script
@@ -17,7 +18,7 @@ RUN apt update && apt install xz-utils tzdata bash curl -y
 
 HEALTHCHECK  --timeout=3s CMD curl --fail http://localhost:5000 || exit 1  
 EXPOSE 5000
-VOLUME /config
+VOLUME /app
 
 ENTRYPOINT ["/init"]
 
