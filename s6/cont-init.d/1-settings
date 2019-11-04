@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# Install necessary packages
+
+apt update && apt install curl git -y
+
+# Clone repo
+
+git clone https://github.com/bugy/script-server /app
+
+# Install dependencies
+
+pip install -r /app/requirements.txt
+
+# Create user to run web facing server
+
+adduser --disabled-login --no-create-home --gecos "" tornado > /dev/null 2>&1
+
+# Retrieve web files
+
+/app/tools/init.py --dev --no-npm
+
