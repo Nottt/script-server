@@ -19,7 +19,7 @@ docker create --rm \
 * `-v /host/path/to/scripts/` - Directory where you should put your scripts on host
 * `-v /host/path/to/runners/` - This is a directory with all your [script configurations](https://github.com/bugy/script-server/wiki/Script-config) (a config file per script)
 * `-v /host/path/to/conf.json` - This should be your server [configuration file](https://github.com/bugy/script-server/wiki/Server-configuration)
-* `-v /host/path/to/dependencies.sh` - This should be a file written in Bash that install whatever you scripts needs on Debian Buster. First line must be `#!/usr/bin/with-contenv bash`
+* `-v /host/path/to/dependencies.sh` - This should be a file that install whatever you scripts needs on Debian Buster. It could be a bash or python script. Be sure to use the proper shebangs e.g `#!/usr/bin/with-contenv bash`
 * `-v /etc/localtime:/etc/localtime:ro` - Sync time with host
 * `-p *:*` - Ports used, only change the left ports.
 
