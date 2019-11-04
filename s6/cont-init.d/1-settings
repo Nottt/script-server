@@ -3,7 +3,7 @@
 
 # Install necessary packages
 
-apt update && apt install curl -y > /dev/null 2>&1
+apt update > /dev/null 2>&1 && apt install curl -y > /dev/null 2>&1
 
 # Retrieve files
 
