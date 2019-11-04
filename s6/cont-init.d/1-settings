@@ -21,3 +21,6 @@ adduser --disabled-login --no-create-home --gecos "" tornado > /dev/null 2>&1
 
 /app/tools/init.py --dev --no-npm
 
+# Fix permissions
+
+chown -R tornado:tornado /app
