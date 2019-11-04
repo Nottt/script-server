@@ -13,7 +13,7 @@ COPY s6/ /etc
 
 # Add necessary packages
 
-RUN apk add --no-cache xz-utils tzdata bash curl
+RUN apt update && apt install xz-utils tzdata bash curl -y
 
 HEALTHCHECK  --timeout=3s CMD curl --fail http://localhost:5000 || exit 1  
 EXPOSE 5000
