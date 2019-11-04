@@ -5,9 +5,9 @@
 
 apt update && apt install curl git -y
 
-# Clone repo
+# Retrieve files
 
-git clone https://github.com/bugy/script-server /app
+curl -Ls https://github.com/bugy/script-server/archive/dev.tar.gz | tar xz --strip 1 -C /app
 
 # Install dependencies
 
