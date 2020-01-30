@@ -11,7 +11,7 @@ curl -Ls https://github.com/bugy/script-server/archive/dev.tar.gz | tar xz --str
 
 # Install dependencies
 
-pip install -r /app/requirements.txt > /dev/null 2>&1
+curl -Ls https://raw.githubusercontent.com/bugy/script-server/master/requirements.txt | pip install -r /dev/stdin
 
 # Create user to run web facing server
 
@@ -24,3 +24,5 @@ adduser --disabled-login --no-create-home --gecos "" tornado > /dev/null 2>&1
 # Fix permissions
 
 chown -R tornado:tornado /app
+
+
