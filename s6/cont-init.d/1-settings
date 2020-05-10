@@ -19,7 +19,7 @@ adduser --disabled-login --no-create-home --gecos "" tornado > /dev/null 2>&1
 
 # Retrieve web files
 
-/app/tools/init.py --dev --no-npm > /dev/null 2>&1
+/app/tools/init.py --no-npm > /dev/null 2>&1
 
 # Fix permissions
 
