@@ -23,6 +23,9 @@ adduser --disabled-login --no-create-home --gecos "" tornado > /dev/null 2>&1
 
 # Fix permissions
 
+groupmod -o -g "$PGID" tornado > /dev/null 2>&1
+usermod -o -u "$PUID" tornado > /dev/null 2>&1
+
 chown -R tornado:tornado /app
 
 
